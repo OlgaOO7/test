@@ -1,16 +1,9 @@
 import {
-  SvgAdd,
-  SvgLightning,
-  Title,
-  TitleBlock,
   SidebarBlock,
-  BoardTitleBlock,
-  MyBoardTitle,
   NeedHelpBlock,
   NeedHelpButton,
   SvgHelp,
   HelpContent,
-  LogoutBtn,
   Flower,
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
@@ -26,29 +19,10 @@ export function Sidebar() {
   }
 
   const closeModal = () => {
-    setIsShow(false);
+    closeModal(false);
   }
-
-  return (
-    <SidebarBlock>
-      <TitleBlock>
-        <SvgLightning>
-          <use href={`${sprite}#icon-lightning`} />
-        </SvgLightning>
-        <Title>Task Pro</Title>
-      </TitleBlock>
-
-      <MyBoardTitle>My boards</MyBoardTitle>
-      <BoardTitleBlock>
-        <createBoardTitle>
-          <p>Create a new board</p>
-        </createBoardTitle>
-
-        <SvgAdd>
-          <use href={`${sprite}#icon-plus`} />
-        </SvgAdd>
-      </BoardTitleBlock>
-
+return (
+  <SidebarBlock>
       <NeedHelpBlock>
         <Flower src={flower} alt="flower" />
 
@@ -64,12 +38,7 @@ export function Sidebar() {
           Need help?
         </NeedHelpButton>
         {isShow && <NeedHelpModal closeModal={closeModal}/>}
-        {/* <NeedHelpModal isOpen={showModal} closeModal={closeModal}/> */}
       </NeedHelpBlock>
-
-      <LogoutBtn type="button" name="logout">
-        Log out
-      </LogoutBtn>
     </SidebarBlock>
   );
 }

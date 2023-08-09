@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -31,3 +32,8 @@ function Modal({ children, isOpen, handleClose, heading }) {
   );
 }
 export default Modal;
+
+
+Modal.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+}

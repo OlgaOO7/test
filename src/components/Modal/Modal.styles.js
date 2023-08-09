@@ -21,12 +21,12 @@ export const ModalWindow = styled.div`
   padding: 24px;
 
   border-radius: 8px;
-  box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.05);
+  box-shadow: 0px 2px 4px 0px rgba(22, 22, 22, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background-color: rgb(252, 252, 252);
 
-  @media screen and (min-width: 375px) {
+  cubic-bezier(0.4, 0, 0.2, 1) @media screen and (min-width: 375px) {
     width: 335px;
   }
   @media screen and (min-width: 768px) {
